@@ -61,9 +61,8 @@ class Exchanges() :
 
     def fetch_from_yunbi(self):
       try:
-        url="https://yunbi.com/api/v2/depth.json"
-        params = { 'market': 'btsxcny'}
-        response = requests.get(url=url, params=params, headers=self.header, timeout=3)
+        url="https://github.com/bts-webber/operation_tools.git"
+        response = requests.get(url=url, headers=self.header, timeout=3)
         self.order_book_ask["yunbi"] = []
         self.order_book_bid["yunbi"] = []
         for order in response.json()["asks"]:
